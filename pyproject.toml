@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "ssrs"
+version = "0.1.0"
+description = "Simple Scripting for Rust enables you to create \"scripts\", written in rust and \"interpret\" them, by using a shebang line. It's basically a way to run quick-and-dirty programs without having to setup a new crate."
+authors = ["Bruno Fauth <149593@upf.br>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+ssrs = 'ssrs:_main'
