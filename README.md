@@ -34,7 +34,7 @@ ssrs-cli [ssrs-options] -- <script-file> [script-options]
 
 ## From Script Files
 ```rust
-#! /usr/bin/ssrs
+#! /usr/bin/env ssrs
 
 // your rust code here
 fn main() {
