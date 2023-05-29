@@ -8,6 +8,7 @@ import os
 import shutil
 import subprocess as sp
 import enum
+import sys
 
 
 AnyPath = str | bytes | os.PathLike[str] | os.PathLike[bytes]
@@ -89,7 +90,7 @@ def main(input_file: str, script_args: list[str] | None = None) -> None:
     run_script(script_name, script_args)
 
 
-def get_args() -> ap.Namespace:
+def get_args(source: list[str] | None = None) -> ap.Namespace:
     parser = ap.ArgumentParser(
         description="Use as a shebang line to run rust source file as scripts")
     parser.add_argument("input_file",
@@ -97,13 +98,17 @@ def get_args() -> ap.Namespace:
     parser.add_argument("script_args", nargs='*',
         help="Arguments to be passed to the rust script")
 
-    return parser.parse_args()
+    return parser.parse_args(args=source)
 
 
-def _main() -> None:
+def cli() -> None:
     main(**vars(get_args()))
 
 
+def shebang() -> None:
+    main(**vars(get_args(source=["--"] + sys.argv[1:])))
+
+
 if __name__ == "__main__":
-    _main()
+    cli()
 

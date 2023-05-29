@@ -22,12 +22,12 @@ pipx install ssrs
 
 ## From the Command Line
 ```sh
-ssrs [ssrs-options] -- <script-file> [script-options]
+ssrs-cli [ssrs-options] -- <script-file> [script-options]
 ```
 
 ## From Script Files
 ```rust
-#! /usr/bin/ssrs --
+#! /usr/bin/ssrs
 
 // your rust code here
 fn main() {
