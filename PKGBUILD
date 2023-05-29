@@ -1,4 +1,4 @@
-# Maintainer: Bruno Fauth <bvfauth@hotmail.com>
+# Maintainer: Bruno Fauth <bvfauth at hotmail dot com>
 
 _name=ssrs
 pkgname="python-$_name"
