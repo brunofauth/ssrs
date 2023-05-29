@@ -1,4 +1,4 @@
-#! /usr/bin/ssrs --
+#! /usr/bin/ssrs
 
 fn main() -> () {
     println!(
