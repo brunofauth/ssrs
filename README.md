@@ -18,6 +18,13 @@ sudo pip install ssrs
 pipx install ssrs
 ```
 
+## With `makepkg`
+```sh
+git clone "https://github.com/brunofauth/ssrs"
+cd ssrs
+makepkg -cris
+```
+
 # Usage
 
 ## From the Command Line
