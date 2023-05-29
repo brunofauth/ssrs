@@ -1,4 +1,4 @@
-#! /usr/bin/env -S python3 ssrs.py --
+#! /usr/bin/ssrs --
 
 fn main() -> () {
     println!(
