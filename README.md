@@ -8,11 +8,6 @@ crate/package.
 
 # Installation
 
-## With `pip`
-```sh
-sudo pip install ssrs
-```
-
 ## With `pipx`
 ```sh
 pipx install ssrs
